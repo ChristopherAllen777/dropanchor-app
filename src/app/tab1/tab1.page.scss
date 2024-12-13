@@ -1,0 +1,45 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+.floating-button-container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 80vh; /* Full viewport height to center in the app */
+  animation: fly-in 2s ease-out; /* Apply the animation */
+}
+
+.ion-fab-button {
+  width: 200px!important;
+  height: 200px!important;
+  .icon {
+    font-size: 90px;
+   }
+} 
+
+ion-fab-button.animated-fab {
+  width: 200px!important;
+  height: 200px!important;
+  --size: 500px; /* Make the button large */
+  font-size: 50px; /* Adjust icon size */
+  //background: linear-gradient(45deg, #4CAF50, #81C784); /* Optional: Gradient for styling */
+  color: white;
+}
+
+@keyframes fly-in {
+  0% {
+    transform: translateY(100vh) scale(0.5); /* Start from below, smaller size */
+    opacity: 0; /* Fully transparent */
+  }
+  50% {
+    transform: translateY(30vh) scale(1.2); /* Move to middle, slightly larger */
+    opacity: 0.5; /* Semi-transparent */
+  }
+  100% {
+    transform: translateY(0) scale(1); /* Settle at the center with full size */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+
